@@ -89,7 +89,7 @@ class BinarySearchTree {
         }
         node.data = minFromRight.data;
 
-        node.right = removeNode(node.right, minFromRight.value);
+        node.right = removeNode(node.right, minFromRight.data);
 
         return node;
       }
@@ -128,22 +128,22 @@ function test() {
   tree.add(9);
   tree.add(14);
   tree.add(2);
+  tree.add(6);
+  tree.add(128);
+  tree.add(8);
+  tree.add(31);
+  tree.add(54);
+  tree.add(1);
   console.log(JSON.stringify(tree, null, 2));
-  // tree.add(6);
-  // tree.add(128);
-  // tree.add(8);
-  // tree.add(31);
-  // tree.add(54);
-  // tree.add(1);
   tree.remove(14);
-  // tree.remove(8);
-  // tree.remove(9);
+  tree.remove(8);
+  tree.remove(9);
   // console.log(tree.has(14));
   // console.log(tree.has(8));
   // console.log(tree.has(9));
   // console.log(tree.has(2));
   // console.log(tree.has(6));
-  // console.log(tree.has(128));
+  console.log(tree.has(128));
   // console.log(tree.has(31));
   // console.log(tree.has(54));
   // console.log(tree.has(1));
